@@ -1,0 +1,24 @@
+{
+  "name": "login-view",
+  "repo": "kidozen/login-view",
+  "description": "login view component",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/event": "*"
+    },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "template.js",    
+    "templates/htmlTemplate.js"
+  ],
+  "templates" : [
+    "templates/htmlTemplate.html"
+  ],
+  "styles": [
+    "login-view.css"
+  ]
+}
