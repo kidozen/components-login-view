@@ -44,7 +44,7 @@ var LoginView = function () {
                 cdvCfg = {
                     htmlTemplate : replace(htmlTemplate)
                 };
-                
+                console.log(JSON.stringify(cdvCfg));                
                 if (cb) cb(cdvCfg)
             }
         },{

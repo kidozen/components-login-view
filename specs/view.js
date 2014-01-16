@@ -6,7 +6,7 @@ describe("login view", function () {
         loginCmp.onSave (function (config) {
             expect(config.htmlTemplate).toBe(true);
         });
-        loginCmp.show(); 
+        loginCmp.show({ application : "tasks"}); 
     });
     it ("should fail for the example", function() {
         expect(false).toBeTruthy();
