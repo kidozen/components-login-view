@@ -14,10 +14,10 @@ describe("DOM Test", function () {
         (myEl.value).should.equal("tasks");
     });
 
-    it.only("should fire onClickEvent", function() {
+    it("should fire onClickEvent", function() {
         var loginCmp = new LoginComponent();
-        loginCmp.onSave (function (config) {
-            expect(config).to.have.property('htmlTemplate');
+        loginCmp.onSave (function (saveCfg) {
+            saveCfg.should.have.property('htmlTemplate');
         });
         loginCmp.show();
         var myEl = document.querySelector('input[type="submit"]');

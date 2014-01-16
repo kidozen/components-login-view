@@ -41,17 +41,19 @@ var LoginView = function () {
         {
             platform: 'cordova',
             generate: function (config, cb) {
-                cdvCfg = {
+                var cdvCfg = {
                     htmlTemplate : replace(htmlTemplate)
                 };
-                console.log(JSON.stringify(cdvCfg));                
                 if (cb) cb(cdvCfg)
             }
-        },{
+        },
+        {
             platform: 'ios',
             generate: function (config, cb) {
-                console.log('generate 4 ios');
-                if (cb) cb(config)
+                var iosCfg = {
+                    htmlTemplate : replace(htmlTemplate)
+                };
+                if (cb) cb(iosCfg)
             }
         }
     ];
