@@ -1,4 +1,3 @@
-
 # login-view
 
   login view component
@@ -12,6 +11,19 @@
 ## API
 
 
+## Running the Unit Tests
+
+Install mocha-phantomjs
+
+  $ npm install -g mocha-phantomjs phantomjs
+
+or
+
+  $ npm install -g mocha-phantomjs phantomjs
+
+Then run the tests with the following command:
+
+  $ mocha-phantomjs specs/testrunner.html
 
 ## License
 
