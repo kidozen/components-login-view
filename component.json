@@ -13,7 +13,9 @@
   "scripts": [
     "index.js",
     "template.js",    
-    "templates/htmlTemplate.js"
+    "templates/htmlTemplate.js",
+    "templates/modelTemplate.js",
+    "templates/controllerTemplate.js"
   ],
   "templates" : [
     "templates/htmlTemplate.html"

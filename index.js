@@ -1,3 +1,5 @@
+var modelTemplate = require('./templates/modelTemplate.js');
+var controllerTemplate = require('./templates/controllerTemplate.js');
 var htmlTemplate = require('./templates/htmlTemplate.js');
 var designerHtml = require('./template.js');
 var events = require('event'); 
@@ -6,6 +8,20 @@ var LoginView = function () {
     var self = this;
     var onSaveFn;
     var settings;
+
+    Object.defineProperty(this, "name", {
+        value: 'LoginView',
+        writable: false,
+        enumerable: false,
+        configurable: true
+    });
+
+    Object.defineProperty(this, "version", {
+        value: '1.0.0',
+        writable: false,
+        enumerable: false,
+        configurable: true
+    });
 
     this.onSave = function (onsave) {
         //TODO: validate fields
@@ -42,34 +58,18 @@ var LoginView = function () {
             platform: 'cordova',
             generate: function (config, cb) {
                 var cdvCfg = {
-                    htmlTemplate : replace(htmlTemplate)
+                    htmlTemplate : replace(htmlTemplate),
+                    modelTemplate: replace(modelTemplate),
+                    controllerTemplate: replace(controllerTemplate)
                 };
                 if (cb) cb(cdvCfg)
-            }
-        },
-        {
-            platform: 'ios',
-            generate: function (config, cb) {
-                var iosCfg = {
-                    htmlTemplate : replace(htmlTemplate)
-                };
-                if (cb) cb(iosCfg)
             }
         }
     ];
 
     function replace (content) {
-        //TODO: Use the Gus's suggestion (Cant remember)
         return content;
     }
-
-    //For UnitTest
-    this.executeTranslator = function(options,cb) {
-        translators.filter(function (el) {
-            return el.platform === options.platform;
-        })[0].generate(options, cb);
-    };
-
 }
 
 module.exports = LoginView;
